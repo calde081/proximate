@@ -1,0 +1,15 @@
+<mat-toolbar color="primary">
+  <a mat-button  routerLink="/" routerLinkActive="active" > Proximate </a>
+  <a mat-button  routerLink="/profile" [queryParams]="{ username: userServer.user }" routerLinkActive="active" > Profile </a>
+  <a mat-button> Explore </a>
+  <span class="example-spacer"></span>
+  <button mat-icon-button class="example-icon favorite-icon" routerLink="/upload"  routerLinkActive="active" >
+    <mat-icon>cloud_upload</mat-icon>
+  </button>
+  <button mat-icon-button class="example-icon" routerLink="/update-user"  routerLinkActive="active" aria-label="Example icon-button with share icon">
+    <mat-icon>share</mat-icon>
+  </button>
+  <button mat-icon-button class="example-icon" (click)="logout()" routerLink="/login"  routerLinkActive="active" aria-label="Example icon-button with share icon">
+    <mat-icon>exit_to_app</mat-icon>
+  </button>
+</mat-toolbar>

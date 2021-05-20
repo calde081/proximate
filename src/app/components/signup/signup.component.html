@@ -1,0 +1,27 @@
+<mat-card>
+  <mat-card-content>
+    <form [formGroup]="form" (ngSubmit)="onSubmit()">
+      <h2>Sign Up</h2>
+      <mat-form-field class="full-width-input">
+        <label>
+          <input matInput placeholder="username" formControlName="username" required>
+        </label>
+      </mat-form-field>
+      <mat-form-field class="full-width-input">
+        <label>
+          <input matInput type="password" placeholder="Password" formControlName="password" required>
+        </label>
+        <mat-error>
+          Please provide a valid password
+        </mat-error>
+      </mat-form-field>
+      <mat-form-field class="full-width-input">
+        <label>
+          <input matInput placeholder="Biograpghy" formControlName="bio" required>
+        </label>
+      </mat-form-field>
+      <button mat-raised-button color="primary" (submit)="onSubmit()" >Register</button>
+    </form>
+    <app-drag-drop (newImageUrl)="imageUrl($event)"></app-drag-drop>
+  </mat-card-content>
+</mat-card>

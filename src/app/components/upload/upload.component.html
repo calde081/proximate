@@ -1,0 +1,24 @@
+<mat-card>
+  <mat-card-content>
+    <form [formGroup]="form" (ngSubmit)="onSubmit()">
+      <h2>Create New Post</h2>
+      <mat-form-field class="full-width-input">
+        <label>
+          <input matInput placeholder="title" formControlName="title" required>
+        </label>
+      </mat-form-field>
+      <mat-form-field class="full-width-input">
+        <label>
+          <input matInput placeholder="subtitle" formControlName="subtitle" required>
+        </label>
+      </mat-form-field>
+      <mat-form-field class="full-width-input">
+        <label>
+          <input matInput placeholder="description" formControlName="description" required>
+        </label>
+      </mat-form-field>
+      <button mat-raised-button color="primary" (submit)="onSubmit()" >Publish</button>
+    </form>
+    <app-drag-drop (newImageUrl)="imageUrl($event)"></app-drag-drop>
+  </mat-card-content>
+</mat-card>

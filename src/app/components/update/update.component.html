@@ -1,0 +1,14 @@
+<mat-card>
+  <mat-card-content>
+    <form [formGroup]="form" (ngSubmit)="onSubmit()">
+      <h2>Update User Info</h2>
+      <mat-form-field class="full-width-input">
+        <label>
+          <input matInput placeholder="bio" formControlName="bio" required>
+        </label>
+      </mat-form-field>
+      <button mat-raised-button color="primary" (submit)="onSubmit()" >Update</button>
+    </form>
+    <app-drag-drop (newImageUrl)="imageUrl($event)"></app-drag-drop>
+  </mat-card-content>
+</mat-card>
